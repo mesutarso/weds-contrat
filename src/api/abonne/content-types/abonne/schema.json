@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abonnes",
+  "info": {
+    "singularName": "abonne",
+    "pluralName": "abonnes",
+    "displayName": "abonne",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "names": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "avenue": {
+      "type": "string"
+    },
+    "quartier": {
+      "type": "string"
+    },
+    "commune": {
+      "type": "enumeration",
+      "enum": [
+        "Bandalungwa",
+        "Barumbu",
+        "Bumbu",
+        "Gombe",
+        "Kalamu",
+        "KasaVubu",
+        "Kimbanseke",
+        "Kinshasa",
+        "Kintambo",
+        "Kisenso",
+        "Lemba",
+        "Limete",
+        "Lingwala",
+        "Makala",
+        "Maluku",
+        "Masina",
+        "MontNgafula",
+        "Ndjili",
+        "Ngaba",
+        "Ngaliema",
+        "NgiriNgiri",
+        "Nsele",
+        "Selembao"
+      ]
+    },
+    "enqueteur": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::enqueteur.enqueteur",
+      "inversedBy": "abonnes"
+    },
+    "acceptance": {
+      "type": "boolean",
+      "required": true
+    },
+    "nom_vendeur": {
+      "type": "string"
+    },
+    "magasin": {
+      "type": "string"
+    },
+    "contact_vendeur": {
+      "type": "string"
+    },
+    "num_serie": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  }
+}

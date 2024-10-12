@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enqueteurs",
+  "info": {
+    "singularName": "enqueteur",
+    "pluralName": "enqueteurs",
+    "displayName": "enqueteur"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "names": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "limite_contrats_generated": {
+      "type": "integer"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "enqueteur"
+    },
+    "abonnes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::abonne.abonne",
+      "mappedBy": "enqueteur"
+    }
+  }
+}
